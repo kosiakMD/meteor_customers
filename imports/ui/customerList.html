@@ -1,0 +1,11 @@
+<template name="customerList">
+	<!--side-nav fixed-->
+	<div class="customerList ">
+		<div class="col s12 l3 _hide-on-med-and-down collection" >
+			{{#each customers}}
+				{{> customer}}
+			{{/each}}
+		</div>
+	</div>
+</template>
+

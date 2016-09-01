@@ -1,0 +1,17 @@
+<template name="mainLayout">
+<body>
+
+	<header>
+		{{> navigation}}
+	</header>
+
+	<main>
+		<div class="container">
+
+			{{>Template.dynamic template=content}}
+
+		</div>
+	</main>
+	{{> footer}}
+</body>
+</template>

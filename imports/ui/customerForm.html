@@ -1,0 +1,73 @@
+<template name="customerForm">
+	<div id="customerForm" class="container col s12 ">
+
+		<h3 class="center-align">{{#if params.edit}}Edit Customer{{else}}Add new Customer{{/if}}</h3>
+
+		<!--<a class="btn-floating btn-large waves-effect waves-light red" style="margin-top:-100px">-->
+			<!--<i class="material-icons">mode_edit</i>-->
+		<!--</a>-->
+		<a class="btn-floating btn-large waves-effect waves-light blue" style="" href="/customer/{{customer._id}}">
+			<i class="material-icons">close</i>
+		</a>
+	{{#if params.edit}}
+		<a class="right btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal1" style="">
+			<i class="material-icons">delete</i>
+		</a>
+	{{/if}}
+	{{#if Template.subscriptionsReady}}
+		<form class="new-customer col s12">
+			<input type="hidden" name="_id" value="{{customer._id}}">
+			<div class="input-field col s12 l6">
+				<i class="material-icons prefix">account_circle</i>
+				<input class="" id="name" type="text" name="Name" required="required" value="{{customer.name}}">
+				<label for="name" class="">Name</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="material-icons prefix">email</i>
+				<input class=" validate" id="email" type="email" name="Email" required="required" value="{{customer.email}}">
+				<label for="email" data-error="wrong" data-success="right" class="">Email</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="material-icons prefix">phone</i>
+				<input class=" validate" id="telephone" type="tel" name="Telephone" value="{{customer.telephone}}">
+				<label for="telephone" data-error="wrong" data-success="right" class="">Telephone</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="material-icons prefix">business</i>
+				<input class="" id="address" type="text" name="Address"  length="100" value="{{customer.address}}">
+				<label for="address" class="">Address</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="tiny material-icons prefix">info</i>
+				<input class="" id="street" type="text" name="Street" value="{{customer.street}}">
+				<label for="street" class="">Street</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="tiny material-icons prefix">info</i>
+				<input class="" id="city" type="text" name="City" value="{{customer.city}}">
+				<label for="city" class="">City</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="tiny material-icons prefix">info</i>
+				<input class="" id="state" type="text" name="State" value="{{customer.state}}">
+				<label for="state" class="">State</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="tiny material-icons prefix">info</i>
+				<input class="" id="zip" type="text" name="Zip" value="{{customer.zip}}">
+				<label for="zip" class="">Zip</label>
+			</div>
+
+			<div class="center-align ">
+				<button class="btn waves-effect waves-light " type="submit" name="action">{{#if params.edit}}Update{{else}}Add{{/if}}
+					<i class="material-icons right">send</i>
+				</button>
+			</div>
+		</form>
+	{{else}}
+		<p>Loading...</p>
+		{{>preloader}}
+	{{/if}}
+	{{>modal}}
+	</div>
+</template>

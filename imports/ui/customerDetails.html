@@ -1,0 +1,61 @@
+<template name="customerDetails">
+	<div id="customerForm" class="container col s12 ">
+		<h3 class="center-align">Customer: {{customer.name}}</h3>
+
+		<a class="btn-floating btn-large waves-effect waves-light blue" style="" href="../customer/edit/{{customer._id}}">
+			<i class="material-icons">mode_edit</i>
+		</a>
+		<a class="right btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal1" style="">
+			<i class="material-icons">delete</i>
+		</a>
+	{{#if Template.subscriptionsReady}}
+		<form class="new-customer col s12">
+			<div class="input-field col s12 l6">
+				<i class="material-icons prefix">account_circle</i>
+				<input class="" id="name" type="text" name="Name" required="required" disabled value="{{customer.name}}">
+				<label for="name" class=" active">Name</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="material-icons prefix">email</i>
+				<input class=" validate" id="email" type="email" name="Email" required="required" disabled value="{{customer.email}}">
+				<label for="email" data-error="wrong" data-success="right" class=" active">Email</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="material-icons prefix">phone</i>
+				<input class=" validate" id="telephone" type="tel" name="Telephone" disabled value="{{customer.telephone}}">
+				<label for="telephone" data-error="wrong" data-success="right" class=" active">Telephone</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="material-icons prefix">business</i>
+				<input class="" id="address" type="text" name="Address" length="100" disabled value="{{customer.address}}">
+				<label for="address" class=" active">Address</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="tiny material-icons prefix">info</i>
+				<input class="" id="street" type="text" name="Street" disabled value="{{customer.street}}">
+				<label for="street" class=" active">Street</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="tiny material-icons prefix">info</i>
+				<input class="" id="city" type="text" name="City" disabled value="{{customer.city}}">
+				<label for="city" class=" active">City</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="tiny material-icons prefix">info</i>
+				<input class="" id="state" type="text" name="State" disabled value="{{customer.state}}">
+				<label for="state" class=" active">State</label>
+			</div>
+			<div class="input-field col s12 l6">
+				<i class="tiny material-icons prefix">info</i>
+				<input class="" id="zip" type="text" name="Zip" disabled value="{{customer.zip}}">
+				<label for="zip" class=" active">Zip</label>
+			</div>
+
+		</form>
+	{{else}}
+		<p>Loading...</p>
+		{{>preloader}}
+	{{/if}}
+		{{>modal}}
+	</div>
+</template>

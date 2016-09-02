@@ -14,7 +14,7 @@ https://www.meteor.com/install
 
 `$ meteor npm install`
 
-`$ meteor add reactive-dict fourseven:scss materialize:materialize@=0.97.6 aldeed:simple-schema kadira:flow-router kadira:blaze-layout zimme:active-route
+`$ meteor add reactive-dict fourseven:scss materialize:materialize@=0.97.6 aldeed:simple-schema kadira:flow-router kadira:blaze-layout zimme:active-route`
 
 `$ meteor`
 

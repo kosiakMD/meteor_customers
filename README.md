@@ -1,3 +1,6 @@
+Meteor project example - "Customers".
+
+Example project with customers' list, possibilities of adding, editing, deleting.
 
 install npm:
 https://docs.npmjs.com/getting-started/installing-node

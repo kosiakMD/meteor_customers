@@ -19,6 +19,6 @@ For fast add examples start with MongoDB console:
 
 `$ meteor mongo` 
 
-and write the next:
+  and write the next:
 
 `$ db.customers.insert({name: 'Bill Gates', email: 'bill@microssoft.com', telephone: '380123456789'})`

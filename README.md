@@ -15,8 +15,8 @@ https://www.meteor.com/install
 
 `$ meteor`
 
-For fast add examples start with Mongo DB and write the next:
+For fast add examples start with MongoDB console:
+`$ meteor mongo` 
 
-`$ meteor mongo`
-
+and write the next:
 `$ db.customers.insert({name: 'Bill Gates', email: 'bill@microssoft.com', telephone: '380123456789'})`

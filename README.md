@@ -1,6 +1,6 @@
 Meteor project example - "Customers".
 
-Example project with customers' list, possibilities of adding, editing, deleting.
+Example project with customers' list, possibilities of adding, editing, deleting. Used Optimistic UI principle. And MongoDB was used as Data Base.
 
 install npm:
 https://docs.npmjs.com/getting-started/installing-node

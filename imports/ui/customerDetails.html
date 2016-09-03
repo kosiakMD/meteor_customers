@@ -1,11 +1,23 @@
 <template name="customerDetails">
 	<div id="customerForm" class="container col s12 ">
-		<h3 class="center-align">Customer: {{customer.name}}</h3>
+		<h4 class="center-align">Customer: {{customer.name}}</h4>
 
-		<a class="btn-floating btn-large waves-effect waves-light blue" style="" href="../customer/edit/{{customer._id}}">
+		<div class="fixed-action-btn hide-on-large-only" style="bottom: 45px; right: 24px;">
+			<a class="btn-floating btn-large waves-effect waves-light blue" style="" href="/customer/edit/{{customer._id}}">
+				<i class="material-icons">mode_edit</i>
+			</a>
+		</div>
+		<a class="hide-on-med-and-down btn-floating btn-large waves-effect waves-light blue" style="" href="/customer/edit/{{customer._id}}">
 			<i class="material-icons">mode_edit</i>
 		</a>
-		<a class="right btn-floating btn-large waves-effect waves-light red modal-trigger" href="#modal1" style="">
+		<div class="fixed-action-btn hide-on-large-only" style="bottom: 115px; right: 24px;">
+			<a class="right btn-floating btn-large waves-effect waves-light red modal-trigger"
+			   href="#modal1" style="">
+				<i class="material-icons">delete</i>
+			</a>
+		</div>
+		<a class="hide-on-med-and-down right btn-floating btn-large waves-effect waves-light red modal-trigger"
+		   href="#modal1" style="">
 			<i class="material-icons">delete</i>
 		</a>
 	{{#if Template.subscriptionsReady}}

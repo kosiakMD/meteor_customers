@@ -1,5 +1,7 @@
 Meteor project example - "Customers".
 
+Stack of technologies: Meteor + jQuery + Blaze + MaterializeCSS + MongoDB.
+
 Example project with customers' list, possibilities of adding, editing, deleting. Used Optimistic UI principle. And MongoDB was used as Data Base.
 
 install npm:

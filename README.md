@@ -26,4 +26,4 @@ For fast add examples start with MongoDB console:
 
   and write the next:
 
-`$ db.customers.insert({name: 'Bill Gates', email: 'bill@microssoft.com', telephone: '380123456789'})`
+`$ db.customers.insert({_id: 'asd123zxc456', name: 'Bill Gates', email: 'bill@microssoft.com', telephone: '380123456789'})`
